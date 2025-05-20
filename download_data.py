@@ -23,9 +23,9 @@ def main():
     os.makedirs('data/processed', exist_ok=True)
     
     # Download dataset
-    print("Downloading Montgomery County X-ray Dataset...")
-    url = "https://openi.nlm.nih.gov/imgs/collections/NLM-MontgomeryCXRSet.zip"
-    zip_path = "data/raw/montgomery_xray.zip"
+    print("Downloading COVID-19 Chest X-ray Dataset...")
+    url = "https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/f12eaf6d-6023-432f-acc9-80c9d7393433/file_downloaded"
+    zip_path = "data/raw/covid19-chest-xray.zip"
     
     try:
         download_file(url, zip_path)
@@ -43,7 +43,7 @@ def main():
     except Exception as e:
         print(f"Error processing dataset: {e}")
         print("Please download the dataset manually from:")
-        print("https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#tuberculosis-image-data-sets")
+        print("https://data.mendeley.com/datasets/rscbjbr9sj/1")
         return
 
 if __name__ == "__main__":

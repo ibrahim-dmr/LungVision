@@ -1,0 +1,82 @@
+digraph G {
+    // Genel stil ayarları
+    graph [fontname = "Arial", rankdir = TB, splines = true, nodesep = 0.8];
+    node [fontname = "Arial", shape = box, style = filled, fillcolor = lightblue];
+    edge [fontname = "Arial"];
+
+    // Veri İşleme Süreci
+    subgraph cluster_data {
+        label = "Veri İşleme Süreci";
+        style = filled;
+        color = lightgrey;
+        node [style = filled, color = white];
+        
+        data1 [label = "Ham Veri\n(archive 7)"];
+        data2 [label = "Veri Ön İşleme\n(Resize, Normalize)"];
+        data3 [label = "Veri Bölme\n(Train/Val/Test)"];
+        data4 [label = "Veri Yükleme\n(DataLoader)"];
+        
+        data1 -> data2 -> data3 -> data4;
+    }
+
+    // Model Eğitim Süreci
+    subgraph cluster_model {
+        label = "Model Eğitim Süreci";
+        style = filled;
+        color = lightblue;
+        node [style = filled, color = white];
+        
+        model1 [label = "EfficientNetV2\nModel Oluşturma"];
+        model2 [label = "Model Eğitimi\n(20 Epoch)"];
+        model3 [label = "Model Değerlendirme"];
+        model4 [label = "Model Kaydetme"];
+        
+        model1 -> model2 -> model3 -> model4;
+    }
+
+    // Sınıf Dağılımı
+    subgraph cluster_classes {
+        label = "Sınıf Dağılımı";
+        style = filled;
+        color = lightgreen;
+        node [style = filled, color = white];
+        
+        class1 [label = "00_Normal"];
+        class2 [label = "01_Pneumonia"];
+        class3 [label = "02_High_Density"];
+        class4 [label = "03_Low_Density"];
+        class5 [label = "04_Obstructive_Diseases"];
+        class6 [label = "05_Infectious_Diseases"];
+        class7 [label = "06_Encapsulated_Lesions"];
+        class8 [label = "07_Mediastinal_Changes"];
+        class9 [label = "08_Chest_Changes"];
+    }
+
+    // Görselleştirme Süreci
+    subgraph cluster_viz {
+        label = "Görselleştirme Süreci";
+        style = filled;
+        color = lightyellow;
+        node [style = filled, color = white];
+        
+        viz1 [label = "Sınıf Dağılımı\nGrafikleri"];
+        viz2 [label = "Doğruluk Oranları"];
+        viz3 [label = "Karışıklık Matrisi"];
+        viz4 [label = "Örnek Görseller"];
+        
+        viz1 -> viz2 -> viz3 -> viz4;
+    }
+
+    // Bağlantılar
+    data4 -> model1;
+    model4 -> viz1;
+    class1 -> data1;
+    class2 -> data1;
+    class3 -> data1;
+    class4 -> data1;
+    class5 -> data1;
+    class6 -> data1;
+    class7 -> data1;
+    class8 -> data1;
+    class9 -> data1;
+} 
