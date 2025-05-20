@@ -89,4 +89,16 @@ Bu proje MIT Lisansı altında lisanslanmıştır - detaylar için LICENSE dosya
 
 ## İletişim
 
-Proje ile ilgili sorularınız veya önerileriniz için lütfen bir issue açın veya e-posta yoluyla iletişime geçin. 
+Proje ile ilgili sorularınız veya önerileriniz için lütfen e-posta (ibrahimdmr1103@gmail.com) yoluyla iletişime geçin. 
+
+
+
+![lung1forgit](https://github.com/user-attachments/assets/6add82d9-d1d1-4da8-9ccb-290e3edc4caf)
+
+![2](https://github.com/user-attachments/assets/18801694-4ffb-4a99-8a08-c2135e113a2c)
+
+![3](https://github.com/user-attachments/assets/2ee6f544-978b-4a19-b007-75cf164db259)
+
+![4](https://github.com/user-attachments/assets/678a84cd-993c-48ed-9dc0-8d0cd8e69419)
+
+
